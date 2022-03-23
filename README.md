@@ -1,4 +1,4 @@
-### movies-explorer-api
+# movies-explorer-api
 
 ## Функционал:
 - Регистрации и авторизация;
@@ -8,7 +8,7 @@
 
 ## Технологии
 - Node.js;
-- MongoDB
-- Express;
+- MongoDB;
+- Express.
 
 Ccылка на API: https://api.movies-search.nomoredomains.club
