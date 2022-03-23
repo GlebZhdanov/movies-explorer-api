@@ -1,4 +1,4 @@
-# movies-explorer-api
+# Movies-explorer-api
 
 ## Функционал:
 - Регистрации и авторизация;
