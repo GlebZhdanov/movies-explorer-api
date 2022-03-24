@@ -24,12 +24,6 @@ mongoose.connect(NODE_ENV === 'production' ? BASE_URL : 'localhost:27017/bitfilm
 
 app.use(requestLogger);
 
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт');
-  }, 0);
-});
-
 app.post('/signup', validateUser, createUser);
 app.post('/signin', validateLogin, loginUser);
 
