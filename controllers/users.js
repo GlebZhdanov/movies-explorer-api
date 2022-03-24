@@ -12,15 +12,6 @@ const SOLT_ROUND = 10;
 
 const { NODE_ENV, JWT_SECRET } = process.env;
 
-// module.exports.getUsers = async (req, res, next) => {
-//   try {
-//     const user = await User.find({});
-//     res.status(200).send(user);
-//   } catch (err) {
-//     next(err);
-//   }
-// };
-
 module.exports.getUser = async (req, res, next) => {
   console.log(req.user._id);
   try {
@@ -38,24 +29,6 @@ module.exports.getUser = async (req, res, next) => {
     }
   }
 };
-
-// module.exports.getUsersById = async (req, res, next) => {
-//   try {
-//     const userId = req.params.id;
-//     const user = await User.findById(userId);
-//     if (user) {
-//       res.status(200).send(user);
-//     } else {
-//       throw new NotFoundErr('Пользователь с указанным id не найден');
-//     }
-//   } catch (err) {
-//     if (err.name === 'CastError') {
-//       next(new BadRequestErr('Ошибка валидации id'));
-//     } else {
-//       next(err);
-//     }
-//   }
-// };
 
 module.exports.patchUsers = async (req, res, next) => {
   try {
