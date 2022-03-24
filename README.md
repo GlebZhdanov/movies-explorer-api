@@ -11,4 +11,4 @@
 - MongoDB;
 - Express.
 
-Ccылка на API: https://api.movies-search.nomoredomains.club
+Ccылка на API: https://api.films.gleb.nomoredomains.work
