@@ -8,10 +8,10 @@ const { validateMovie, validationIdMovie } = require('../middleware/validation')
 
 const router = express.Router();
 
-router.get('/', getMovies);
+router.get('/movies', getMovies);
 
-router.post('/', validateMovie, postMovie);
+router.post('/movies', validateMovie, postMovie);
 
-router.delete('/:id', validationIdMovie, deleteMovie);
+router.delete('/movies/:id', validationIdMovie, deleteMovie);
 
 module.exports = router;

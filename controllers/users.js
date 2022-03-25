@@ -22,20 +22,13 @@ module.exports.getUser = async (req, res, next) => {
       throw new NotFoundErr('Пользователь с указанным id не найден');
     }
   } catch (err) {
-    if (err.name === 'CastError') {
-      next(new BadRequestErr('Ошибка валидации id'));
-    } else {
-      next(err);
-    }
+    next(err);
   }
 };
 
 module.exports.patchUsers = async (req, res, next) => {
   try {
     const { email, name } = req.body;
-    if (!email || !name) {
-      throw new BadRequestErr('Поля "name" и "about" должно быть заполнены');
-    }
     const user = await User.findByIdAndUpdate(
       req.user._id,
       { email, name },
@@ -49,6 +42,8 @@ module.exports.patchUsers = async (req, res, next) => {
   } catch (err) {
     if (err.name === 'VaidationError') {
       next(new BadRequestErr(`${Object.values(err.errors).map((error) => error.message).join(', ')}`));
+    } else if (err.codeName === 'DuplicateKey') {
+      next(new ConflictError('Данные email уже зарегистрирован'));
     } else {
       next(err);
     }
