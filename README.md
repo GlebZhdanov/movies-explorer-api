@@ -8,10 +8,10 @@
 
 ##  Документация к API
 
-- #### `POST /users/signup`
+- #### `POST /signup`
 создаёт пользователя с переданными в теле `email, password и name`
 
-- #### `POST /users/signin`
+- #### `POST /signin`
 проверяет переданные в теле `email и password` и возвращает `JWT` токен
 
 ### Защищенные роуты:
@@ -19,14 +19,17 @@
 - #### `GET /users/me`
 возвращает информацию о пользователе, его `email и name` 
 
-- #### `GET /articles`
-возвращает все сохранённые пользователем статьи
+- #### `PATCH /users/me`
+изменяет информацию о пользователе
 
-- #### `POST /articles`
-создаёт статью с переданными в теле `keyword, title, text, date, source, link и image`
+- #### `GET /movies`
+возвращает все сохранённые фильмы пользователя
 
-- #### `DELETE /articles/articleId`
-удаляет сохранённую статью по `id`
+- #### `POST /movies`
+создаёт фильм с необходимыми полями
+
+- #### `DELETE /movies/Id`
+удаляет фильм по `id`
 
 ##  Стек
 
