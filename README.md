@@ -8,24 +8,24 @@
 
 ##  Документация к API
 
-#### `POST /users/signup`
+- #### `POST /users/signup`
 создаёт пользователя с переданными в теле `email, password и name`
 
-#### `POST /users/signin`
+- #### `POST /users/signin`
 проверяет переданные в теле `email и password` и возвращает `JWT` токен
 
-### Защищенные роуты
+### Защищенные роуты:
 
-#### `GET /users/me`
+- #### `GET /users/me`
 возвращает информацию о пользователе, его `email и name` 
 
-#### `GET /articles`
+- #### `GET /articles`
 возвращает все сохранённые пользователем статьи
 
-#### `POST /articles`
+- #### `POST /articles`
 создаёт статью с переданными в теле `keyword, title, text, date, source, link и image`
 
-#### `DELETE /articles/articleId`
+- #### `DELETE /articles/articleId`
 удаляет сохранённую статью по `id`
 
 ##  Стек
