@@ -47,3 +47,7 @@
 ##### `npm run dev` – запуск сервера с hot reload на http://localhost:3000/
 
 ### **Ссылка на готовый бекенд: [Movies-explorer-api](https://api.films.gleb.nomoredomains.work)**
+
+### Статус проекта
+
+Проект завершён.
